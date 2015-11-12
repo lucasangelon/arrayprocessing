@@ -34,12 +34,15 @@ public class Initializer {
         System.out.println("\n\n");
 
         // Sorting section
-        Sorting searchClass = new Sorting(hashClass.getOriginalValuesArray());
+        Sorting sortingClass = new Sorting(hashClass.getOriginalValuesArray());
 
-        searchClass.sort();
-        searchClass.printValues();
+        sortingClass.sort();
+        sortingClass.printValues();
 
+        // Searching section
+        Searching searchClass = new Searching();
 
-
+        searchClass.searchValue(sortingClass.getSortedArray(), 54);
+        searchClass.searchValue(sortingClass.getSortedArray(), 27);
     }
 }

@@ -77,4 +77,8 @@ public class Sorting {
             System.out.println(i);
         }
     }
+
+    public int[] getSortedArray() {
+        return inputArray;
+    }
 }
