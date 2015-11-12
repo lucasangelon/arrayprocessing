@@ -6,6 +6,7 @@ import java.util.List;
  */
 public class Hashing {
 
+    // Declaring the arrays and the constant through which the hashing will operate.
     private final int VARIATE_CONSTANT = 25;
     private List<String> originalNames;
     private List<String> hashedNames;
@@ -20,6 +21,7 @@ public class Hashing {
     }
 
     private void instantiateArrays() {
+        // Instantiating arrays.
         originalNames = new ArrayList<String>();
         hashedNames = new ArrayList<String>();
         restoredArray = new ArrayList<String>();
@@ -36,9 +38,13 @@ public class Hashing {
 
         // Hashing data. Caesar Shift.
         for (int i = 0; i < (name.length()); i++) {
+           // Get the int value for the character.
            int character = (int) name.charAt(i);
 
+           // Add the variation to the int value retrieved.
            int newCharacter = character + VARIATE_CONSTANT;
+
+           // Cast it to a char and add it to the "hashedName".
            hashedName = hashedName + (char) newCharacter;
         }
 
@@ -51,13 +57,15 @@ public class Hashing {
 
         int hashedValue = 0;
 
+        // Add the constant to the value in order to "hash" it.
         hashedValue = value + VARIATE_CONSTANT;
 
+        // Add it to the array.
         hashedValues.add(hashedValue);
     }
 
+    // Adds the data to a new array to display the "unhashing" process.
     public void restoreArray() {
-        // Creating a new array to restore the data.
 
         // Strings
         for (String hashedName : hashedNames) {
