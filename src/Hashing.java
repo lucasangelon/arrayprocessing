@@ -34,7 +34,7 @@ public class Hashing {
 
         String hashedName = "";
 
-        // Hashing data.
+        // Hashing data. Caesar Shift.
         for (int i = 0; i < (name.length()); i++) {
            int character = (int) name.charAt(i);
 
@@ -85,7 +85,7 @@ public class Hashing {
         }
     }
 
-    public void getOriginalNames() {
+    public void printOriginalArrays() {
         System.out.println("Strings\n\n");
         originalNames.forEach(System.out::println);
         System.out.println("\n");
@@ -95,7 +95,7 @@ public class Hashing {
         System.out.println("\n");
     }
 
-    public void getHashedNames() {
+    public void printHashedArrays() {
         System.out.println("Strings\n\n");
         hashedNames.forEach(System.out::println);
         System.out.println("\n");
@@ -105,7 +105,7 @@ public class Hashing {
         System.out.println("\n");
     }
 
-    public void getRestoredArray() {
+    public void printRestoredArrays() {
         System.out.println("Strings\n\n");
         restoredArray.forEach(System.out::println);
         System.out.println("\n");
@@ -113,6 +113,9 @@ public class Hashing {
         System.out.println("Values\n\n");
         restoredValues.forEach(System.out::println);
         System.out.println("\n");
+    }
 
+    public List<Integer> getOriginalValuesArray() {
+        return this.originalValues;
     }
 }
